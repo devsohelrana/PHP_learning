@@ -66,7 +66,9 @@ git push -u -f origin main
 >
 > The `-f` (or `--force`) flag stands for *force*. This will automatically overwrite everything in the remote directory. We’re using it here to overwrite the default README that GitHub automatically initialized.
 
-> [!Important] All together
+---
+
+> All together
 
 ```
 git init
