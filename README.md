@@ -15,7 +15,8 @@
 
 ### Step 1 — Create a new GitHub Repository
 
-> [!Go to] > [New repository](https://github.com/new) && create new repository.
+> [!TIP]
+> Go to [New repository](https://github.com/new) && create new repository.
 
 ### Step 2 — Initialize Git in the project folder
 
