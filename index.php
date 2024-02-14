@@ -1,20 +1,30 @@
 <?php
 
-// Print something on display follow this syntex..
-echo 'Display....';
-echo "Display....";
-print 'Display...'; 
+// define associative array in PHP
 
-// PHP veriable Declaring && define..
-// variable name cannot start with a number
-// veriable name only containe A-z, 0-9, and _ 
+$brand = array(
+    'id' => 10000,
+    'name' => 'MSI',
+    'company' => 'Bangladesh',
+    'office' => 'Dhaka',
+);
 
-$veriable_name = 'Value';
-$_variableName = 'Value';
+var_dump($brand);
 
-echo "Veriable store {$veriable_name}";
+$user = [
+    'id' => 10000000,
+    'name' => 'Sohel Rana',
+    'email' => 'dev.sohelrana@gmail.com',
+    'avater' => 'https://dev.sohelrna.me/avater/',
 
+];
 
+foreach ($user as $title => $value) {
+    echo "$title: $value <br>";
+};
 
+// change value 
+$user['email'] = 'sohelrana@gmail.com';
 
-?>
+// fatch value or data form associative array
+echo $user["email"];
