@@ -5,7 +5,6 @@
 
 ## PHP | Important Topics | Basic
 
-- PHP Syntax.
 - PHP Syntax
 - PHP Variables
 - PHP Echo / Print
