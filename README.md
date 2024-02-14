@@ -1,11 +1,14 @@
+## PHP Arrays
+- [Arrays](#arrays)
+- [Indexed Arrays](#indexed-arrays)
+- [Associative Arrays](#Associative-Arrays)
+- [Access Array Items](#Access-Array-Items)
+- [Update Array Items](#Update-Array-Items)
+- [Add Array Items](#Add-Array-Items)
+- [Remove Array Items](#Remove-Array-Items)
+- [Sorting Arrays](#Sorting-Arrays)
+- [Sorting Arrays](#Sorting-Arrays)
 
-```table-of-contents
-style: nestedList # TOC style (nestedList|inlineFirstLevel)
-minLevel: 0 # Include headings from the specified level
-maxLevel: 0 # Include headings up to the specified level
-includeLinks: true # Make headings clickable
-debugInConsole: false # Print debug info in Obsidian console
-```
 
 ## Arrays
 ```php
@@ -50,7 +53,7 @@ $user = [
 ];
 ```
 
-## Indexed Arrays
+## Indexed-Arrays
 In indexed arrays each item has an index number.
 By default, the first item has index 0, the second item has item 1, etc.
 ```php
@@ -61,7 +64,7 @@ $user = [
 ];
 ```
 
-## Associative Arrays
+## Associative-Arrays
 ```php
 $brand = array(
     'id' => 10000,
@@ -78,18 +81,18 @@ $userAcco = [
 ];
 ```
 
-## Access Array Items
+## Access-Array-Items
 ```php
 echo $userAcco["email"] . '<br>';
 var_dump($userAcco);
 ```
 
-## Update Array Items
+## Update-Array-Items
 ```php
 $userAcco['email'] = 'sohelrana@gmail.com';
 ```
 
-## Add Array Items
+## Add-Array-Items
 ```php
 # add array item
 $userAcco["phone"] = "+8801822-079954";
@@ -98,7 +101,7 @@ array_push($user, "name", "age"); # this method working normal array
 $userAcco += ["token" => "jfh93303+_iodjfhkd", "verified_at" => true]; # this method working associative array
 ```
 
-## Remove Array Items
+## Remove-Array-Items
 ```php
 // remove array item
 /**
@@ -111,7 +114,7 @@ array_splice($user, 1, 2); # First specify the index (where to start) && second 
 unset($userAcco["token"]);
 ```
 
-## Sorting Arrays
+## Sorting-Arrays
 ```php
 // Sorting Arrays
 /**
@@ -128,7 +131,3 @@ rsort($numbers);
 
 var_dump($numbers);
 ```
-
-
-
-
