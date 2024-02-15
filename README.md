@@ -1,4 +1,4 @@
-# PHP Operators
+# PHP Operators ![](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 Operators are used to perform operations on variables and values.
 PHP divides the operators in the following groups:
 
