@@ -1,133 +1,106 @@
-## PHP Arrays
-- [Arrays](#arrays)
-- [Indexed Arrays](#indexed-arrays)
-- [Associative Arrays](#Associative-Arrays)
-- [Access Array Items](#Access-Array-Items)
-- [Update Array Items](#Update-Array-Items)
-- [Add Array Items](#Add-Array-Items)
-- [Remove Array Items](#Remove-Array-Items)
-- [Sorting Arrays](#Sorting-Arrays)
-- [Sorting Arrays](#Sorting-Arrays)
+# PHP Operators
+Operators are used to perform operations on variables and values.
+PHP divides the operators in the following groups:
+
+- [Arithmetic operators](#Arithmetic-operators)
+- [Assignment operators](#Assignment-operators)
+- [Comparison operators](#Comparison-operators)
+- [Increment/Decrement operators](#Increment/Decrement-operators)
+- [Logical operators](#Logical-operators)
+- [String operators](#String-operators)
+- [Array operators](#Array-operators)
+- [Conditional assignment operators](#Conditional-assignment-operators)
 
 
-## Arrays
-```php
-// create array
+## Arithmetic-operators 
+The PHP arithmetic operators are used with numeric values to perform common arithmetical operations, such as addition, subtraction, multiplication etc.
 
-# create arrays by using array() function
-$user = array(1, 'Sohel Rana', "BBA at PUST", '1st year 1st semester'); #single line
-$user = array(
-    1,
-    'Sohel Rana',
-    "BBA at PUST",
-    '1st year 1st semester'
-); # multipule line
+| Operator | Name | Example | Result |
+| ---- | ---- | ---- | ---- |
+| + | Addition | $x + $y | Sum of $x and $y |
+| - | Subtraction | $x - $y | Difference of $x and $y |
+| * | Multiplication | $x * $y | Product of $x and $y |
+| / | Division | $x / $y | Quotient of $x and $y |
+| % | Modulus | $x % $y | Remainder of $x divided by $y |
+| ** | Exponentiation | $x ** $y | Result of raising $x to the $y'th power |
 
-# or using shorter syntax by using [] brackets
-$user = [
-    1,
-    "Sohel Rana",
-    "BBA at PUST",
-];
+## Assignment-operators 
+The PHP assignment operators are used with numeric values to write a value to a variable.
 
-# array keys
-$user = [
-    0 => 'Sohel Rana',
-    1 => 'Shamim',
-    2 => 'Sumon Sarker'
-];
+| Assignment | Same as... | Description |
+| ---- | ---- | ---- |
+| x = y | x = y | The left operand gets set to the value of the expression on the right |
+| x += y | x = x + y | Addition |
+| x -= y | x = x - y | Subtraction |
+| x *= y | x = x * y | Multiplication |
+| x /= y | x = x / y | Division |
+| x %= y | x = x % y | Modulus |
 
-# associative array
-$brand = array(
-    'id' => 10000,
-    'name' => 'MSI',
-    'company' => 'Bangladesh',
-    'office' => 'Dhaka',
-);
+## Comparison-operators 
+The PHP comparison operators are used to compare two values (number or string):
 
-$user = [
-    'id' => 10000000,
-    'name' => 'Sohel Rana',
-    'email' => 'dev.sohelrana@gmail.com',
-    'avater' => 'https://dev.sohelrna.me/avater/',
-];
-```
+| Operator | Name | Example | Result |
+| ---- | ---- | ---- | ---- |
+| == | Equal | $x == $y | Returns true if $x is equal to $y |
+| === | Identical | $x === $y | Returns true if $x is equal to $y, and they are of the same type |
+| != | Not equal | $x != $y | Returns true if $x is not equal to $y |
+| <> | Not equal | $x <> $y | Returns true if $x is not equal to $y |
+| !== | Not identical | $x !== $y | Returns true if $x is not equal to $y, or they are not of the same type |
+| > | Greater than | $x > $y | Returns true if $x is greater than $y |
+| < | Less than | $x < $y | Returns true if $x is less than $y |
+| >= | Greater than or equal to | $x >= $y | Returns true if $x is greater than or equal to $y |
+| <= | Less than or equal to | $x <= $y | Returns true if $x is less than or equal to $y |
+| <=> | Spaceship | $x <=> $y | Returns an integer less than, equal to, or greater than zero, depending on if $x is less than, equal to, or greater than $y. Introduced in PHP 7. |
 
-## Indexed-Arrays
-In indexed arrays each item has an index number.
-By default, the first item has index 0, the second item has item 1, etc.
-```php
-$user = [
-    0 => 'Sohel Rana',
-    1 => 'Shamim',
-    2 => 'Sumon Sarker'
-];
-```
+## Increment/Decrement-operators 
+The PHP increment operators are used to increment a variable's value.
+The PHP decrement operators are used to decrement a variable's value.
 
-## Associative-Arrays
-```php
-$brand = array(
-    'id' => 10000,
-    'name' => 'MSI',
-    'company' => 'Bangladesh',
-    'office' => 'Dhaka',
-);
+| Operator | Same as... | Description |
+| ---- | ---- | ---- |
+| ++$x | Pre-increment | Increments $x by one, then returns $x |
+| $x++ | Post-increment | Returns $x, then increments $x by one |
+| --$x | Pre-decrement | Decrements $x by one, then returns $x |
+| $x-- | Post-decrement | Returns $x, then decrements $x by one |
 
-$userAcco = [
-    'id' => 10000000,
-    'name' => 'Sohel Rana',
-    'email' => 'dev.sohelrana@gmail.com',
-    'avater' => 'https://dev.sohelrna.me/avater/',
-];
-```
+## Logical-operators 
+The PHP logical operators are used to combine conditional statements.
 
-## Access-Array-Items
-```php
-echo $userAcco["email"] . '<br>';
-var_dump($userAcco);
-```
+| Operator | Name | Example | Result |
+| ---- | ---- | ---- | ---- |
+| and | And | $x and $y | True if both $x and $y are true |
+| or | Or | $x or $y | True if either $x or $y is true |
+| xor | Xor | $x xor $y | True if either $x or $y is true, but not both |
+| && | And | $x && $y | True if both $x and $y are true |
+| \| | Or | $x \| $y | True if either $x or $y is true |
+| ! | Not | !$x | True if $x is not true |
 
-## Update-Array-Items
-```php
-$userAcco['email'] = 'sohelrana@gmail.com';
-```
+## String-operators 
+PHP has two operators that are specially designed for strings.
 
-## Add-Array-Items
-```php
-# add array item
-$userAcco["phone"] = "+8801822-079954";
-# add multiple array items
-array_push($user, "name", "age"); # this method working normal array
-$userAcco += ["token" => "jfh93303+_iodjfhkd", "verified_at" => true]; # this method working associative array
-```
+| Operator | Name | Example | Result |
+| ---- | ---- | ---- | ---- |
+| . | Concatenation | $txt1 . $txt2 | Concatenation of $txt1 and $txt2 |
+| .= | Concatenation assignment | $txt1 .= $txt2 | Appends $txt2 to $txt1 |
 
-## Remove-Array-Items
-```php
-// remove array item
-/**
- * array_splice() 
- * unset()
- * array_shift() => Remove the First Item
- * array_pop() => Remove the Last Item
- */
-array_splice($user, 1, 2); # First specify the index (where to start) && second how many items you want to delete
-unset($userAcco["token"]);
-```
+## Array-operators
+The PHP array operators are used to compare arrays.
 
-## Sorting-Arrays
-```php
-// Sorting Arrays
-/**
- * sort() - sort arrays in ascending order
- * rsort() - sort arrays in descending order
- * asort() - sort associative arrays in ascending order, according to the value
- * ksort() - sort associative arrays in ascending order, according to the key
- * arsort() - sort associative arrays in descending order, according to the value
- * krsort() - sort associative arrays in descending order, according to the key
- */
-$numbers = array(4, 6, 2, 22, 11, -11, 0, 99, 25, 88, -30);
+| Operator | Name | Example | Result |
+| ---- | ---- | ---- | ---- |
+| + | Union | $x + $y | Union of $x and $y |
+| == | Equality | $x == $y | Returns true if $x and $y have the same key/value pairs |
+| === | Identity | $x === $y | Returns true if $x and $y have the same key/value pairs in the same order and of the same types |
+| != | Inequality | $x != $y | Returns true if $x is not equal to $y |
+| <> | Inequality | $x <> $y | Returns true if $x is not equal to $y |
+| !== | Non-identity | $x !== $y | Returns true if $x is not identical to $y |
 
-rsort($numbers);
+## Conditional-assignment-operators 
+The PHP conditional assignment operators are used to set a value depending on conditions:
 
-var_dump($numbers);
-```
+| Operator | Name | Example | Result |
+| ---- | ---- | ---- | ---- |
+| ?: | Ternary | $x = _expr1_ ? _expr2_ : _expr3_ | Returns the value of $x.  <br>The value of $x is _expr2_ if _expr1_ = TRUE.  <br>The value of $x is _expr3_ if _expr1_ = FALSE |
+| ?? | Null coalescing | $x = _expr1_ ?? _expr2_ | Returns the value of $x.  <br>The value of $x is _expr1_ if _expr1_ exists, and is not NULL.  <br>If _expr1_ does not exist, or is NULL, the value of $x is _expr2_.  <br>Introduced in PHP 7 |
+
+
